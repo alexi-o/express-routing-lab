@@ -25,6 +25,6 @@ router.get('/:num', function (req,res) {
 router.post('/', function(req, res) {
 	candies.push(req.body);
 	res.json(req.body);
-})
+});
 
 module.exports = router;

@@ -27,4 +27,17 @@ router.post('/', function(req, res) {
 	res.json(req.body);
 });
 
+router.put('/:id', function (req, res) {
+	var id = req.params.id-1;
+	candies[id].name = req.body.name;
+	candies[id].color = req.body.color;
+	res.end();
+});
+
+router.delete('/:id', function (req, res) {
+	var id = req.params.id-1;
+	candies[id] = null;
+	res.end();
+})
+
 module.exports = router;
